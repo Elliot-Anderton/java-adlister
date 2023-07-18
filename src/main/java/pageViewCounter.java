@@ -14,16 +14,12 @@ public class pageViewCounter extends HttpServlet {
         res.setContentType("text/html");
         PrintWriter out = res.getWriter();
         String reset = req.getParameter("reset");
-        try {
-            if (reset.equals("y")) {
-                count = 1;
-                out.println(String.format("Views on this page: %d", count));
-                count++;
-            } else {
-                out.println(String.format("Views on this page: %d", count));
-                count++;
-            }
-        } catch (Exception e) {
+
+        if (reset != null && reset.equals("y")) {
+            count = 1;
+            out.println(String.format("Views on this page: %d", count));
+            count++;
+        } else {
             out.println(String.format("Views on this page: %d", count));
             count++;
         }
