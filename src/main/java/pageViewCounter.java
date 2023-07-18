@@ -17,11 +17,8 @@ public class pageViewCounter extends HttpServlet {
 
         if (reset != null && reset.equals("y")) {
             count = 1;
-            out.println(String.format("Views on this page: %d", count));
-            count++;
-        } else {
-            out.println(String.format("Views on this page: %d", count));
-            count++;
         }
+        out.println(String.format("Views on this page: %d", count));
+        count++;
     }
 }
