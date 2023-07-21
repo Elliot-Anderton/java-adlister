@@ -9,7 +9,12 @@
     <jsp:include page="partials/navbar.jsp" />
 
     <div class="container">
-        <h1>Viewing your profile.</h1>
+        <h1>Hello ${sessionScope['user']}.</h1>
+    </div>
+    <div>
+        <form action = "/profile" method = "post">
+            <button>Logout</button>
+        </form>
     </div>
 
 </body>
