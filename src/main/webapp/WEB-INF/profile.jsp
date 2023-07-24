@@ -12,7 +12,7 @@
         <h1>Hello ${sessionScope['user']}.</h1>
     </div>
     <div>
-        <form action = "/profile" method = "post">
+        <form action = "/logout" method = "GET">
             <button>Logout</button>
         </form>
     </div>
